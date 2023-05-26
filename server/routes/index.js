@@ -137,6 +137,8 @@ router.post('/ping', function (req, res) {
 
     // Calculate direction
     const direction = calcCWorCCW(currLocation, previousLocationArray)
+
+    // Array contains next 3 bus stops
     const calcNextBusStops = nextBusStops(currLocation, previousLocationArray)
 
     //We will update the bus's last ping location and time
@@ -148,7 +150,6 @@ router.post('/ping', function (req, res) {
       previousLatitude: lastLat, // Previous Latitude Ping
       previousLocationArray: previousLocationArray,
       direction: direction, 
-      nextBusStops, calcNextBusStops,
       heading: heading.toString(),
       route: data.route,
       id: data.id,
