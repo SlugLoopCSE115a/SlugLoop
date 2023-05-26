@@ -315,6 +315,7 @@ function calcCWorCCW({lat1, lon1}, previousLocationArray) {
   return "n/a";
 }
 
+// updates next 3 bus stops
 function nextBusStops({lat1, lon1}, previousLocationArray) {
   let direction = calcCWorCCW({lat1, lon1}, previousLocationArray)
 
